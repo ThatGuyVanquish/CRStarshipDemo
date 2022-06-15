@@ -1,0 +1,41 @@
+final String url = "35.230.64.109"
+pipeline {
+    agent { docker { image 'docker:latest' } }
+    stages {
+        stage('build') {
+            steps {
+                sh 'docker build -t naveh23/navenginx:SNAPSHOT CRStarshipDemo/Docker/'
+            }
+        }
+         stage('push') {
+            steps {
+                withCredentials([string(credentialsId: 'DockerHubPwd', variable: 'dockerpwd')]) {
+                sh """
+                    docker login -u naveh23 -p ${dockerpwd} 
+                    docker push  naveh23/navenginx:SNAPSHOT
+                """
+                }
+
+            }
+    }
+    stage('redeploy'){
+        steps{
+            sshagent(credentials : ['ssh-nave-inst']) {
+            sh "ssh -o StrictHostKeyChecking=no AzureAD+NaveHersco@${url} sudo docker stop nave-nginx | true"
+            sh "ssh -o StrictHostKeyChecking=no AzureAD+NaveHersco@${url} sudo docker run --pull=always --name=nave-nginx --rm -d -p 80:80  naveh23/navenginx:SNAPSHOT"
+        }
+        }
+    }
+
+    stage('Tests'){
+         agent { docker { image 'curlimages/curl' } }
+        steps{
+            script {
+                    
+                    final String response = sh(script: "curl -s $url", returnStdout: true).trim()
+                    echo response
+                }
+        }
+    }
+    }
+}
