@@ -98,15 +98,17 @@
 			<div class="thumbnails recentworks row">
 				
 				<div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
-					<a class="thumbnail" href="https://www.linkedin.com/in/eden-naroditsky-214ab5233/">
+					<a class="thumbnail">
 						<span class="img">
 							<img src="assets/images/eden.jpg" alt="">
-							<span class="cover"><span class="more">Linkedin &rarr;</span></span>
+							<span class="cover"><span class="more">
+								<div class="popup" onclick="myFunctioneden()">Linkedin &rarr;
+									<span class="popuptext" id="myPopupeden"><img src="assets/images/qrs/edenqr.png" alt=""></span>
+								  </div>
+							</span></span>
 						</span>
-						<span class="title">Eden Naroditsky</span>
+						<a class="thumbnail" href="https://www.linkedin.com/in/eden-naroditsky-214ab5233/"><span class="title">Eden Naroditsky</span></a>
 					</a>
-					<h4></h4>
-					<p></p>
 				</div>
 				
 				<!-- <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
@@ -123,25 +125,30 @@
 				<div class="col-xs-12 col-sm-6 col-md-4 col-lg-4"></div>
 				
 				<div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
-					<a class="thumbnail" href="https://www.linkedin.com/in/ron-faygler-a323a1237/">
+					<a class="thumbnail">
 						<span class="img">
 							<img src="assets/images/ron.jpg" alt="">
-							<span class="cover"><span class="more">Linkedin &rarr;</span></span>
+							<span class="cover"><span class="more">
+								<div class="popup" onclick="myFunctionron()">Linkedin &rarr;
+									<span class="popuptext" id="myPopupron"><img src="assets/images/qrs/ronqr.png" alt=""></span>
+								  </div>
+							</span></span>
 						</span>
-						<span class="title">Ron Faygler</span>
+						<a class="thumbnail" href="https://www.linkedin.com/in/ron-faygler-a323a1237/"><span class="title">Ron Faygler</span></a>
 					</a>
-					<h4></h4>
-					<p></p>
 				</div>
 
-
 				<div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
-					<a class="thumbnail" href="https://www.linkedin.com/in/keren-gorelik-5ab1b8233/">
+					<a class="thumbnail">
 						<span class="img">
 							<img src="assets/images/s1.jpg" alt="">
-							<span class="cover"><span class="more">Linkedin &rarr;</span></span>
+							<span class="cover"><span class="more">
+								<div class="popup" onclick="myFunctionkeren()">Linkedin &rarr;
+									<span class="popuptext" id="myPopupkeren"><img src="assets/images/qrs/kerenqr.png"></span>
+								  </div>
+							</span></span>
 						</span>
-						<span class="title">Keren Gorelik</span>
+						<a class="thumbnail" href="https://www.linkedin.com/in/keren-gorelik-5ab1b8233/"><span class="title">Keren Gorelik</span></a>
 					</a>
 					<h4></h4>
 					<p></p>
@@ -150,12 +157,16 @@
 				<div class="col-xs-12 col-sm-6 col-md-4 col-lg-4"></div>
 
 				<div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
-					<a class="thumbnail" href="https://www.linkedin.com/in/nave-hersco/">
+					<a class="thumbnail">
 						<span class="img">
 							<img src="assets/images/nave.jpg" alt="">
-							<span class="cover"><span class="more">Linkedin &rarr;</span></span>
+							<span class="cover"><span class="more">
+								<div class="popup" onclick="myFunctionnave()">Linkedin &rarr;
+									<span class="popuptext" id="myPopupnave"><img src="assets/images/qrs/naveqr.png"></span>
+								  </div>
+							</span></span>
 						</span>
-						<span class="title">Nave Hersco</span>
+						<a class = "thumbnail" href="https://www.linkedin.com/in/nave-hersco/"><span class="title">Nave Hersco</span></a>
 					</a>
 					<span class="details"><a href="https://github.com/ThatGuyVanquish">GitHub</a></span>
 					<h4></h4>
@@ -208,5 +219,33 @@
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
 <script src="assets/js/template.js"></script>
+<script>
+	// When the user clicks on div, open the popup
+	function myFunctioneden() {
+	  var popup = document.getElementById("myPopupeden");
+	  popup.classList.toggle("show");
+	}
+	</script>
+<script>
+	// When the user clicks on div, open the popup
+	function myFunctionron() {
+	  var popup = document.getElementById("myPopupron");
+	  popup.classList.toggle("show");
+	}
+	</script>
+<script>
+	// When the user clicks on div, open the popup
+	function myFunctionkeren() {
+		var popup = document.getElementById("myPopupkeren");
+		popup.classList.toggle("show");
+	}
+	</script>
+	<script>
+		// When the user clicks on div, open the popup
+		function myFunctionnave() {
+			var popup = document.getElementById("myPopupnave");
+			popup.classList.toggle("show");
+		}
+		</script>
 </body>
 </html>
