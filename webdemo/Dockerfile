@@ -9,7 +9,7 @@ copy ./website/assets/less/mixins.less /usr/share/nginx/html/assets/less
 copy ./website/assets/less/navbar.less /usr/share/nginx/html/assets/less
 copy ./website/assets/less/styles.less /usr/share/nginx/html/assets/less
 copy ./website/assets/less/3rd-party/lesshat.less /usr/share/nginx/html/assets/less/3rd-party
-copy ./website/assets/less/bootstrap /usr/share/nginx/html/assets/less
+copy ./website/assets/less/3rd-party/bootstrap /usr/share/nginx/html/assets/less/3rd-party
 
 
 EXPOSE 80
