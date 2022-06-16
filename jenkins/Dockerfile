@@ -8,4 +8,5 @@ RUN  curl -fsSLO https://get.docker.com/builds/Linux/x86_64/docker-17.04.0-ce.tg
 RUN jenkins-plugin-cli --plugins  docker:1.2.9 \
                             ssh-agent:295.v9ca_a_1c7cc3a_a_ \
                             prometheus:2.0.11 \
-                            cloudbees-disk-usage-simple:0.10
+                            cloudbees-disk-usage-simple:0.10 \
+                            docker-workflow:1.28 \
