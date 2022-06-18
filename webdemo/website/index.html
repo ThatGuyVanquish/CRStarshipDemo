@@ -102,8 +102,8 @@
 						<span class="img">
 							<img src="assets/images/team/finalized/eden2.jpg" alt="">
 							<span class="cover"><span class="more">
-								<div class="popup" onclick="myFunctioneden()">Linkedin &rarr;
-									<span class="popuptext" id="myPopupeden"><img src="assets/images/qrs/edenqr.png" alt=""></span>
+								<div class="popup" onclick="linkedinPopup('edenPopup')">Linkedin &rarr;
+									<span class="popuptext" id="edenPopup"><img src="assets/images/qrs/edenqr.png" alt=""></span>
 								  </div>
 							</span></span>
 						</span>
@@ -129,8 +129,8 @@
 						<span class="img">
 							<img src="assets/images/team/finalized/ron5.jpg" alt="">
 							<span class="cover"><span class="more">
-								<div class="popup" onclick="myFunctionron()">Linkedin &rarr;
-									<span class="popuptext" id="myPopupron"><img src="assets/images/qrs/ronqr.png" alt=""></span>
+								<div class="popup" onclick="linkedinPopup('ronPopup')">Linkedin &rarr;
+									<span class="popuptext" id="ronPopup"><img src="assets/images/qrs/ronqr.png" alt=""></span>
 								  </div>
 							</span></span>
 						</span>
@@ -145,8 +145,8 @@
 						<span class="img">
 							<img src="assets/images/team/finalized/keren2.jpg" alt="">
 							<span class="cover"><span class="more">
-								<div class="popup" onclick="myFunctionkeren()">Linkedin &rarr;
-									<span class="popuptext" id="myPopupkeren"><img src="assets/images/qrs/kerenqr.png"></span>
+								<div class="popup" onclick="linkedinPopup('kerenPopup')">Linkedin &rarr;
+									<span class="popuptext" id="kerenPopup"><img src="assets/images/qrs/kerenqr.png"></span>
 								  </div>
 							</span></span>
 						</span>
@@ -164,8 +164,8 @@
 						<span class="img">
 							<img src="assets/images/team/finalized/nave3.jpg" alt="">
 							<span class="cover"><span class="more">
-								<div class="popup" onclick="myFunctionnave()">Linkedin &rarr;
-									<span class="popuptext" id="myPopupnave"><img src="assets/images/qrs/naveqr.png"></span>
+								<div class="popup" onclick="linkedinPopup('navePopup')">Linkedin &rarr;
+									<span class="popuptext" id="navePopup"><img src="assets/images/qrs/naveqr.png"></span>
 								  </div>
 							</span></span>
 						</span>
@@ -222,33 +222,6 @@
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
 <script src="assets/js/template.js"></script>
-<script>
-	// When the user clicks on div, open the popup
-	function myFunctioneden() {
-	  var popup = document.getElementById("myPopupeden");
-	  popup.classList.toggle("show");
-	}
-	</script>
-<script>
-	// When the user clicks on div, open the popup
-	function myFunctionron() {
-	  var popup = document.getElementById("myPopupron");
-	  popup.classList.toggle("show");
-	}
-	</script>
-<script>
-	// When the user clicks on div, open the popup
-	function myFunctionkeren() {
-		var popup = document.getElementById("myPopupkeren");
-		popup.classList.toggle("show");
-	}
-	</script>
-	<script>
-		// When the user clicks on div, open the popup
-		function myFunctionnave() {
-			var popup = document.getElementById("myPopupnave");
-			popup.classList.toggle("show");
-		}
-		</script>
+<script src="assets/js/linkedinpopup.js"></script>
 </body>
 </html>
