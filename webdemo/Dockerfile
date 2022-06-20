@@ -1,9 +1,6 @@
 FROM nginx
 
-copy ./website/index.html /usr/share/nginx/html/index.html
-copy ./website/project.html /usr/share/nginx/html/project.html
-copy ./website/assets /usr/share/nginx/html/assets
-
+copy ./website /usr/share/nginx/html
 
 EXPOSE 80
 
